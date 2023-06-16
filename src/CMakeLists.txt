@@ -52,7 +52,6 @@ foreach(dir IN LISTS LIB_SOURCE_DIRS)
   # message(STATUS "[LOG] dir: ${dir}")
   target_include_directories(phxpaxos PUBLIC "${PROJECT_SOURCE_DIR}/${dir}")
 endforeach()
-target_include_directories(phxpaxos PUBLIC "${PROJECT_SOURCE_DIR}/../include")
 target_link_libraries(
   phxpaxos
   gtest
