@@ -12,8 +12,8 @@ add_executable(phxecho ${SOURCES})
 add_dependencies(phxecho phxpaxos plugin)
 target_link_libraries(
   phxecho
-  ${CMAKE_BINARY_DIR}/src/libphxpaxos.a
-  ${CMAKE_BINARY_DIR}/plugin/libplugin.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libphxpaxos.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libplugin.a
   pthread
   glog
   protobuf

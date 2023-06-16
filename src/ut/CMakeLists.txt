@@ -6,7 +6,7 @@ add_executable(ut ${UT_SOURCES})
 add_dependencies(ut phxpaxos)
 target_link_libraries(
   ut
-  ${CMAKE_BINARY_DIR}/src/libphxpaxos.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libphxpaxos.a
   pthread
   gtest
   gmock

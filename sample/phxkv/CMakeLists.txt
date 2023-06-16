@@ -27,8 +27,8 @@ add_executable(phxkv_grpc_client ${PROJECT_SOURCE_DIR}/kv_grpc_client_main.cpp
 add_dependencies(phxkv_grpc_client phxpaxos plugin)
 target_link_libraries(
   phxkv_grpc_client
-  ${CMAKE_BINARY_DIR}/src/libphxpaxos.a
-  ${CMAKE_BINARY_DIR}/plugin/libplugin.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libphxpaxos.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libplugin.a
   pthread
   grpc++
   glog
@@ -40,8 +40,8 @@ add_executable(phxkv_grpc_server ${PROJECT_SOURCE_DIR}/kv_grpc_server_main.cpp
 add_dependencies(phxkv_grpc_server phxpaxos plugin)
 target_link_libraries(
   phxkv_grpc_server
-  ${CMAKE_BINARY_DIR}/src/libphxpaxos.a
-  ${CMAKE_BINARY_DIR}/plugin/libplugin.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libphxpaxos.a
+  ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libplugin.a
   pthread
   grpc++
   glog

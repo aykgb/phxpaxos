@@ -11,5 +11,6 @@ message(STATUS "[LOG/phxelection] SOURCES: ${SOURCES}")
 
 add_executable(phxelection ${SOURCES})
 add_dependencies(phxelection phxpaxos)
-target_link_libraries(phxelection ${CMAKE_BINARY_DIR}/src/libphxpaxos.a pthread
-                      protobuf leveldb)
+target_link_libraries(
+  phxelection ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libphxpaxos.a pthread protobuf
+  leveldb)
